@@ -1,19 +1,21 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const mainService = require('./mainService');
 
 const app = express();
-const port = 7000;
+const PORT = process.env.PORT || 7000;
 
-// Middleware to parse JSON bodies
-app.use(bodyParser.json());
+app.use(express.json());
 
-// Use the routes defined in mainService.js
+app.get('/', (req, res) => {
+    res.send('Welcome to the Code Execution Backend!');
+});
+
 app.use('/main', mainService);
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
+
 
 
 

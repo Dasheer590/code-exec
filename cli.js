@@ -1,7 +1,9 @@
+#!/usr/bin/env node
+
 const axios = require('axios');
 const inquirer = require('inquirer');
 
-const API_URL = 'http://localhost:7000/main/execute'; // Update with your actual API URL
+const API_URL = 'https://code-exec-2.onrender.com'; // Update with your actual API URL
 
 async function getCodeFromUser() {
     const answers = await inquirer.prompt([
