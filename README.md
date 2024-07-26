@@ -22,31 +22,31 @@ Skills and technologies used: Sandboxing code execution, integration with compil
 2. Install dependencies:
    npm install
    
-Running Locally
-   >Build and run the Docker container:
+### Running Locally
+   1.Build and run the Docker container:
       docker build -t code-execution .
       docker run -d -p 7001:7000 -v "C:/Users/Lenovo ThinkPad L560/Desktop/code-execution-backend/src/sandbox:/sandbox" code-execution
-   >Start the backend server:
+   2.Start the backend server:
       node src/app.js
-   >Test the API using Postman:
+   3.Test the API using Postman:
       Send a POST request to 'http://localhost:7001/main/execute' with the C code in the request body.
 
-Usage
-API Endpoints
+### Usage
+### API Endpoints
 POST /main/execute
 Request Body: { "sourceCode": "your C code here" }
 Response: { "output": "execution result" }
 
-CLI Tool
+### CLI Tool
 To use the CLI tool for submitting C code:
-    npx code-execution-cli
+    'npx code-execution-cli'
     
-Known Issues
+### Known Issues
 Command line tool might face issues due to deployment constraints.
 
-Contributing
+### Contributing
 Feel free to submit issues or pull requests.
 
-License
+### License
 This project is licensed under the MIT License.
 
