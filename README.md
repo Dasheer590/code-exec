@@ -25,7 +25,7 @@ Skills and technologies used: Sandboxing code execution, integration with compil
 ### Running Locally
    1.Build and run the Docker container:
       docker build -t code-execution .
-      docker run -d -p 7001:7000 -v "C:/Users/Lenovo ThinkPad L560/Desktop/code-execution-backend/src/sandbox:/sandbox" code-execution
+      docker run -d -p 7001:7000 -v "C:/Users/path/to/code-execution-backend/src/sandbox:/sandbox" code-execution
    2.Start the backend server:
       node src/app.js
    3.Test the API using Postman:
